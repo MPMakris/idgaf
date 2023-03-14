@@ -1,3 +1,14 @@
-# IDGAF
+# Red Quickstart
 
-Quickstart the game with equipments, bots, and a strong armour.
+Start the game with:
+
+- a red, strong armor
+- a red, powerful and portable fusion reactor
+- red, strong lasers
+- red, fast exoskeletons
+- red, capable batteries
+- red, durable energy shields
+- red. large personal roboports
+- red, fast construction robots
+
+Paint it red.

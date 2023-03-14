@@ -1,13 +1,13 @@
 {
-  "name": "idgaf",
-  "version": "1.1.1",
-  "title": "IDGAF Quickstart",
+  "name": "red-quickstart",
+  "version": "0.1.0",
+  "title": "Red Quickstart",
   "author": "RedRafe",
-  "source": "https://github.com/RedRafe/idgaf",
-  "homepage": "https://mods.factorio.com/mod/idgaf",
+  "source": "https://github.com/RedRafe/red-quickstart",
+  "homepage": "https://mods.factorio.com/mod/red-quickstart",
   "dependencies": [
     "base >= 1.1.0"
   ],
-  "description": "Quickstart the game with equipments, bots, and a strong armour.",
+  "description": "Start the game with equipments, bots, and a strong armour.",
   "factorio_version": "1.1"
 }
