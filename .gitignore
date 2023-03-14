@@ -1,3 +1,7 @@
+changelog_template.txt
+.vscode/
+scripts/
+
 # Compiled Lua sources
 luac.out
 
