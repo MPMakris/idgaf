@@ -7,6 +7,8 @@ local item_list = {
 	{  3, "rr-energy-shield"},
 	{  1, "rr-personal-roboport"},
 	{500, "rr-construction-robot"},
+	{  1, "belt-immunity-equipment"},
+	{  1, "night-vision-equipment"}
 }
 
 -- add items to player inventory

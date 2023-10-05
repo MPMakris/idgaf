@@ -1,6 +1,8 @@
 local path_g = "__red-quickstart__/graphics/"
 local path_i = path_g .. "icons/"
 
+local eq_size = (settings.startup['req-quickstart:extra-cheese'].value and 1) or 2
+
 ------------------------------------------
 
 local robot = table.deepcopy(data.raw["construction-robot"]["construction-robot"])
@@ -81,8 +83,8 @@ data:extend({
     },
     shape =
     {
-      width = 2,
-      height = 2,
+      width = eq_size,
+      height = eq_size,
       type = "full"
     },
     max_shield_value = 10000,
@@ -122,8 +124,8 @@ data:extend({
     },
     shape =
     {
-      width = 4,
-      height = 4,
+      width = eq_size * eq_size,
+      height = eq_size * eq_size,
       type = "full"
     },
     energy_source =
@@ -159,8 +161,8 @@ data:extend({
     },
     shape =
     {
-      width = 2,
-      height = 2,
+      width = eq_size,
+      height = eq_size,
       type = "full"
     },
     energy_source =
@@ -222,8 +224,8 @@ data:extend({
     },
     shape =
     {
-      width = 2,
-      height = 4,
+      width = eq_size,
+      height = 2 * eq_size,
       type = "full"
     },
     energy_source =
@@ -261,8 +263,8 @@ data:extend({
     },
     shape =
     {
-      width = 2,
-      height = 2,
+      width = eq_size,
+      height = eq_size,
       type = "full"
     },
     energy_source =
