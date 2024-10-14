@@ -1,14 +1,15 @@
 local item_list = {
-	{  1, "rr-power-armor"},
-	{  2, "rr-battery"},
-	{  3, "rr-exoskeleton"},
-	{  1, "rr-fusion-reactor"},
-	{ 15, "rr-personal-laser-defense"},
-	{  3, "rr-energy-shield"},
-	{  1, "rr-personal-roboport"},
-	{500, "rr-construction-robot"},
-	{  1, "belt-immunity-equipment"},
-	{  1, "night-vision-equipment"}
+	{  1, 'rr-power-armor'},
+	{  5, 'rr-battery'},
+	{  3, 'rr-exoskeleton'},
+	{  1, 'rr-fusion-reactor'},
+	{ 15, 'rr-personal-laser-defense'},
+	{  3, 'rr-energy-shield'},
+	{  1, 'rr-personal-roboport'},
+	{500, 'rr-construction-robot'},
+	{  1, 'belt-immunity-equipment'},
+	{  1, 'night-vision-equipment'},
+	{  1, 'solar-panel-equipment'},
 }
 
 -- Add items to player inventory
@@ -18,14 +19,14 @@ local function insert_into_inventory(player)
 	end
 
 	for _, item in pairs(item_list) do
-		if game.item_prototypes[item[2]] ~= nil then
+		if prototypes.item[item[2]] ~= nil then
 			player.insert{ name = item[2], count = item[1]}
 		else
-			player.print("Unable to add \"" .. item[2] .. "\" to inventory, please check spelling.")
+			player.print('Unable to add ' .. item[2] .. ' to inventory, please check spelling.')
 		end
 	end
 
-	global.players[player.name] = true
+	storage.players[player.name] = true
 end
 
 local function arm_player(player)
@@ -33,7 +34,7 @@ local function arm_player(player)
 		return
 	end
 
-	if not global.players[player.name] then
+	if not storage.players[player.name] then
 		insert_into_inventory(player)
 	end
 end
@@ -41,7 +42,7 @@ end
 
 -- Setup
 script.on_init(function()
-	global.players = {}
+	storage.players = {}
 
 	for _, player in pairs(game.players) do
 		arm_player(player)
@@ -49,7 +50,7 @@ script.on_init(function()
 end)
 
 script.on_configuration_changed(function(ConfigurationChangedData)
-	global.players = global.players or {}
+	storage.players = storage.players or {}
 
 	if ConfigurationChangedData.mod_changes['red-quickstart'] then
 		for _, player in pairs(game.players) do
@@ -57,7 +58,7 @@ script.on_configuration_changed(function(ConfigurationChangedData)
 			-- check armor inventory
 			local armor_inventory = player.get_inventory(defines.inventory.character_armor)
 			if armor_inventory then
-				local item, _ = armor_inventory.find_item_stack("rr-power-armor")
+				local item, _ = armor_inventory.find_item_stack('rr-power-armor')
 				if item then
 					already_given = true
 				end
@@ -65,13 +66,13 @@ script.on_configuration_changed(function(ConfigurationChangedData)
 			-- check main inventory
 			local main_inventory = player.get_main_inventory()
 			if main_inventory then
-				local item, _ = main_inventory.find_item_stack("rr-power-armor")
+				local item, _ = main_inventory.find_item_stack('rr-power-armor')
 				if item then
 					already_given = true
 				end
 			end
 			if already_given then
-				global.players[player.name] = true
+				storage.players[player.name] = true
 			else
 				arm_player(player)
 			end

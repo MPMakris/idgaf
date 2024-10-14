@@ -1,7 +1,7 @@
 local path_g = "__red-quickstart__/graphics/"
 local path_i = path_g .. "icons/"
 
-local eq_size = (settings.startup['req-quickstart:extra-cheese'].value and 1) or 2
+local eq_size = (settings.startup['req-quickstart-extra-cheese'].value and 1) or 2
 
 ------------------------------------------
 
@@ -63,7 +63,7 @@ data:extend({
     localised_description = {"item-description.rr-battery"},
     icon = path_i .. "rr-battery.png",
     icon_size = 64, icon_mipmaps = 4,
-    placed_as_equipment_result = "rr-battery",
+    place_as_equipment_result = "rr-battery",
     subgroup = "equipment",
     order = "b[battery]-b[battery-equipment-mk3]",
     default_request_amount = 5,
@@ -104,7 +104,7 @@ data:extend({
     localised_description = {"item-description.rr-energy-shield"},
     icon = path_i .. "rr-energy-shield.png",
     icon_size = 64, icon_mipmaps = 4,
-    placed_as_equipment_result = "rr-energy-shield",
+    place_as_equipment_result = "rr-energy-shield",
     subgroup = "military-equipment",
     order = "a[shield]-b[energy-shield-equipment-mk3]",
     default_request_amount = 5,
@@ -141,7 +141,7 @@ data:extend({
     name = "rr-fusion-reactor",
     icon = path_i .. "rr-fusion-reactor.png",
     icon_size = 64, icon_mipmaps = 4,
-    placed_as_equipment_result = "rr-fusion-reactor",
+    place_as_equipment_result = "rr-fusion-reactor",
     subgroup = "equipment",
     order = "a[energy-source]-b[fusion-reactor-mk2]",
     default_request_amount = 1,
@@ -178,6 +178,7 @@ data:extend({
       cooldown = 40,
       range = 32,
       damage_modifier = 3 * 100,
+      ammo_category = "laser",
       ammo_type =
       {
         category = "laser",
@@ -204,7 +205,7 @@ data:extend({
     name = "rr-personal-laser-defense",
     icon = path_i .. "rr-personal-laser-defense.png",
     icon_size = 64, icon_mipmaps = 4,
-    placed_as_equipment_result = "rr-personal-laser-defense",
+    place_as_equipment_result = "rr-personal-laser-defense",
     subgroup = "military-equipment",
     order = "b[active-defense]-a[personal-laser-defense-equipment-mk2]",
     default_request_amount = 5,
@@ -242,7 +243,7 @@ data:extend({
     name = "rr-exoskeleton",
     icon = path_i .. "rr-exoskeleton.png",
     icon_size = 64, icon_mipmaps = 4,
-    placed_as_equipment_result = "rr-exoskeleton",
+    place_as_equipment_result = "rr-exoskeleton",
     subgroup = "equipment",
     order = "d[exoskeleton]-a[exoskeleton-equipment-mk2]",
     default_request_amount = 5,
@@ -308,7 +309,7 @@ data:extend({
     localised_description = {"item-description.rr-personal-roboport"},
     icon = path_i .. "rr-personal-roboport.png",
     icon_size = 64, icon_mipmaps = 4,
-    placed_as_equipment_result = "rr-personal-roboport",
+    place_as_equipment_result = "rr-personal-roboport",
     subgroup = "equipment",
     order = "e[robotics]-b[personal-roboport-mk3-equipment]",
     default_request_amount = 1,
@@ -318,7 +319,7 @@ data:extend({
   {  
     type = "equipment-grid",
     name = "rr-equipment-grid",
-    width = 10,
+    width = 11,
     height = 12,
     equipment_categories = {"armor"}
   },

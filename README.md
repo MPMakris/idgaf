@@ -8,7 +8,7 @@ Start the game with:
 - red, fast exoskeletons
 - red, capable batteries
 - red, durable energy shields
-- red. large personal roboports
+- red. large personal roboport
 - red, fast construction robots
 
 Paint it red.
