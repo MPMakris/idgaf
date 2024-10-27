@@ -1,12 +1,13 @@
 {
   "name": "red-quickstart",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "title": "Red Quickstart",
   "author": "RedRafe",
   "source": "https://github.com/RedRafe/red-quickstart",
   "homepage": "https://mods.factorio.com/mod/red-quickstart",
   "dependencies": [
-    "base >= 2.0.0"
+    "base >= 2.0.0",
+    "(?) any-planet-start"
   ],
   "description": "Start the game with equipments, bots, and a strong armor.",
   "factorio_version": "2.0"
