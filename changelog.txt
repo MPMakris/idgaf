@@ -2,7 +2,11 @@
 Version: 2.1.0
 Date: 2024-11-25
   Changes:
+    - Red Armor now flies in Space Age 
+    - Added graphics for Red Armor  
+    - Added red logistic robot
     - Added settings for recipes
+    - Added technology to unlock recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.5
 Date: 2024-10-27
