@@ -273,7 +273,7 @@ data:extend({
     infinite = true,
     equipment_grid = 'rr-equipment-grid',
     inventory_size_bonus = 30,
-    provides_flight = feature_flags.pace_travel,
+    provides_flight = feature_flags.space_travel,
     open_sound = { filename = '__base__/sound/armor-open.ogg', volume = 1 },
     close_sound = { filename = '__base__/sound/armor-close.ogg', volume = 1 },
   },
@@ -291,6 +291,15 @@ data:extend({
     stack_size = 500,
   },
 })
+
+local char = data.raw.character and data.raw.character.character
+if char then
+  local armor_list = char.animations and char.animations[#char.animations]
+  if armor_list and armor_list.armors then
+    table.insert(armor_list.armors, 'rr-power-armor')
+  end
+  data.raw['character-corpse']['character-corpse'].armor_picture_mapping['rr-power-armor'] = #char.animations
+end
 
 if not enabled then
   return
@@ -376,12 +385,12 @@ data:extend({
     name = 'rr-power-armor',
     enabled = false,
     ingredients = {
-      { type = 'item', name = 'processing-unit', amount = 60 },
-      { type = 'item', name = 'electric-engine-unit', amount = 40 },
-      { type = 'item', name = 'low-density-structure', amount = 30 },
-      { type = 'item', name = 'speed-module-2', amount = 25 },
-      { type = 'item', name = 'efficiency-module-2', amount = 25 },
-      { type = 'item', name = 'power-armor-mk2', amount = e_count },
+      { type = 'item', name = 'processing-unit', amount = e_count * 60 },
+      { type = 'item', name = 'electric-engine-unit', amount = e_count * 40 },
+      { type = 'item', name = 'low-density-structure', amount = e_count * 30 },
+      { type = 'item', name = 'speed-module-2', amount = e_count * 25 },
+      { type = 'item', name = 'efficiency-module-2', amount = e_count * 25 },
+      { type = 'item', name = 'power-armor-mk2', amount = 1 },
     },
     results = {{ type = 'item', name = 'rr-power-armor', amount = 1 }},
   },
