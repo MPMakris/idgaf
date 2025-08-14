@@ -1,8 +1,8 @@
 {
-  "name": "red-quickstart",
-  "version": "2.1.0",
-  "title": "Red Quickstart",
-  "author": "RedRafe",
+  "name": "red-quickstart-makris",
+  "version": "0.1.0",
+  "title": "Red Quickstart Makris",
+  "author": "Makris",
   "source": "https://github.com/RedRafe/red-quickstart",
   "homepage": "https://mods.factorio.com/mod/red-quickstart",
   "dependencies": [
