@@ -1,4 +1,4 @@
-elocal item_list = {
+local item_list = {
 	{  1, 'rr-power-armor'},
 	{  5, 'rr-battery'},
 	{  3, 'rr-exoskeleton'},
