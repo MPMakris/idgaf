@@ -1,4 +1,4 @@
-local path_g = '__red-quickstart__/graphics/'
+local path_g = '__red-quickstart-makris__/graphics/'
 local path_i = path_g .. 'icons/'
 
 local eq_size = (settings.startup['req-quickstart-extra-cheese'].value and 1) or 2
