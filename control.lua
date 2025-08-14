@@ -25,6 +25,9 @@ local item_list = {
 	{  200, 'inserter'},
 	{  100, 'small-electric-pole'},
 	{  100, 'small-lamp'},
+	{  100, 'pipe'},
+	{  50, 'pipe-to-ground'},
+	{  50, 'medium-electric-pole'},
 }
 
 -- Add items to player inventory
