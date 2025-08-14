@@ -10,6 +10,21 @@ local item_list = {
 	{  1, 'belt-immunity-equipment'},
 	{  1, 'night-vision-equipment'},
 	{  1, 'solar-panel-equipment'},
+	{  20, 'boiler'},
+	{  40, 'steam-engine'},
+	{  50, 'burner-mining-drill'},
+	{  50, 'electric-mining-drill'},
+	{  2, 'offshore-pump'},
+	{  50, 'stone-furnace'},
+	{  50, 'assembling-machine-1'},
+	{  50, 'iron-chest'},
+	{  1000, 'transport-chest'},
+	{  50, 'underground-belt'},
+	{  50, 'splitter'},
+	{  5, 'burner-inserter'},
+	{  200, 'inserter'},
+	{  100, 'small-electric-pole'},
+	{  100, 'small-lamp'},
 }
 
 -- Add items to player inventory
